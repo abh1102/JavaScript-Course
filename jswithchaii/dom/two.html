@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        background-color: black;
+    }
+</style>
+
+<body>
+
+</body>
+<script>
+    //  CREATING DIV USING SCRIPT
+    const div = document.createElement('div')
+    console.log(div);
+    div.className = "main"
+    div.id = Math.random() * 10 + 1
+    div.setAttribute("title", "generated title")
+    div.style.backgroundColor = "green"
+    div.style.padding = "12px"
+    const addText = document.createTextNode("abhi loves pragya")
+    div.appendChild(addText)
+    document.body.appendChild(div)
+</script>
+
+</html>

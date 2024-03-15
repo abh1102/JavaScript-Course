@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DoM</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+        }
+
+        .parent {
+            color: green
+        }
+    </style>
+</head>
+
+<body>
+    <div class="dom">
+        <h1 id="title" class="heading">Dom learning</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat, laborum.</p>
+    </div>
+
+    <div class="parent">
+        <div class="child">amit keshri></div>
+        <div class="child">amit kumar</div>
+        <div class="child">prince kumar keshri</div>
+        <div class="child">anubhav</div>
+        <div class="child">santosh</div>
+
+    </div>
+
+</body>
+<script>
+    const parent = document.querySelector('.parent')
+    console.log(parent.children[0].innerText);
+    for (let i = 0; i < parent.children.length; i++) {
+        console.log(parent.children[i].innerText);
+    }
+    parent.children[1].style.color = "orange"
+    console.log(parent.firstElementChild);
+    console.log(parent.lastElementChild);
+    firstchild = document.querySelector('.child')
+    console.log(firstchild);
+    console.log(firstchild.parentElement);
+    console.log(firstchild.nextElementSibling);
+    // NODES
+    console.log("NODES ARE", parent.childNodes);
+</script>
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SETTIMEOUT</title>
+</head>
+
+<body>
+    <h1 class="h1">My name is abhishek Jha</h1>
+    <button id="butt">stop</button>
+
+</body>
+<script>
+    const saymynamae = function () {
+        console.log("abhishek");
+    }
+    const changeheading = function () {
+        document.querySelector('h1').innerHTML = "pragya"
+    }
+    const change = setTimeout(changeheading, 2000)
+    setTimeout(saymynamae, 2000)
+
+    // setTimeout(function () {
+    //     console.log("abhishek")
+    // }, 2000)
+    document.querySelector('#butt').addEventListener('click', function () {
+        clearTimeout(change)
+        console.log("stopped")
+    })
+</script>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API</title>
+</head>
+
+<body>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla exercitationem numquam sint praesentium ullam
+    perferendis, quis qui ipsum ratione odio blanditiis veritatis distinctio minus, recusandae cumque minima eaque
+    dignissimos. Quo!
+</body>
+<script>
+    const url = "https://api.github.com/users/abh1102"
+    var req = new XMLHttpRequest()
+    req.open('GET', url)
+    console.log(req.readyState);
+    function onreadystatechane() {
+        if (req.readyState == 4) {
+            const data = JSON.parse(this.responseText())
+            console.log(data.followers);
+        }
+    }
+    send()
+
+</script>
+
+</html>

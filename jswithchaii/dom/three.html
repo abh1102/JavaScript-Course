@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM LEARNING</title>
+</head>
+<style>
+    body {
+        background-color: black;
+        color: aliceblue;
+    }
+</style>
+
+<body>
+    <ul class="language">
+        <li>
+            Python
+        </li>
+    </ul>
+</body>
+<script>
+    function addlanguage(langName) {
+        const li = document.createElement('li');
+        li.innerHTML = `${langName}`
+        document.querySelector('.language').appendChild(li)
+
+    }
+    addlanguage('java')
+    addlanguage('html')
+    //MORE OPTIMIZED METHOD WITH THE HELP of  document.createTextNode
+    function addoptilanguage(langName) {
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector('.language').appendChild(li)
+
+    }
+    addoptilanguage('ruby')
+    addoptilanguage('golang')
+    //EDITING THE LANGUAGE
+    const secondLang = document.querySelector("li:nth-child(2)")
+    const newla = document.createElement('li')
+    newla.textContent = 'abhi and pragya'
+    secondLang.replaceWith(newla);
+    //REMOVE
+    const lastLang = document.querySelector('li:last-child')
+    langName.remove();
+</script>
+
+</html>

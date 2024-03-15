@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events handling and event propogation</title>
+</head>
+<style>
+    #div1 {
+        background-color: lightgreen;
+        padding: 24px;
+        border: 1px solid black;
+    }
+
+    #div2 {
+        background-color: yellow;
+        padding: 18px;
+        border: 1px solid black;
+
+    }
+
+    #div3 {
+        background-color: orange;
+        padding: 10px;
+        border: 1px solid black;
+    }
+</style>
+
+<body>
+    <div id="div1">
+        <div id="div2">
+            <div id="div3">
+
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    //EVENT BUBLING
+    let div1 = document.querySelector('#div1')
+    let div2 = document.querySelector('#div2')
+    let div3 = document.querySelector('#div3')
+    div1.addEventListener("click", function (e) {
+        alert("div1 clicked")
+    })
+    div2.addEventListener("click", function (e) {
+        alert("div2 clicked")
+    })
+
+    div3.addEventListener("click", function (e) {
+        alert("div3 clicked")
+    })
+    //propogation steps=3-2-1
+    //EVENT CAPTURING
+    div1.addEventListener("click", function (e) {
+        alert("div1 clicked")
+    }, true)
+    div2.addEventListener("click", function (e) {
+        alert("div2 clicked")
+    }, true)
+
+    div3.addEventListener("click", function (e) {
+        alert("div3 clicked")
+    }, true)
+    //proprogation steps=1-2-3
+
+</script>
+
+</html>

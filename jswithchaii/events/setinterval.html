@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SETINTERVAL</title>
+</head>
+
+<body>
+    <h1 class="h1">My name is abhishek Jha</h1>
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+
+</body>
+<script>
+    //     const set = function set() {
+    //         console.log('pr', Date.now());
+    //     }
+    //     const interval = setInterval(set, 1000);
+    //     // clearInterval(interval);
+
+    //     document.querySelector('#start').addEventListener('click', function () {
+    //         clearInterval(interval);
+    //         setInterval(set, 1000);
+    //         //console.log(c);
+    //     })
+    //     document.querySelector('#stop').addEventListener('click', function () {
+    //         clearInterval(interval)
+    //         // console.log("stopped")
+    //     })
+        const set = function set() {
+        console.log('pr', Date.now());
+    }
+
+    let interval; // Declare interval outside
+
+    document.querySelector('#start').addEventListener('click', function () {
+        clearInterval(interval); // Clear any existing interval
+        interval = setInterval(set, 1000); // Set new interval
+    });
+
+    document.querySelector('#stop').addEventListener('click', function () {
+        clearInterval(interval); // Clear the interval
+    });
+
+</script>
+
+</html>
